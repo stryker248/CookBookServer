@@ -22,8 +22,8 @@ app.use(function (err, req, res, next) {
     console.error(err.stack);
 });
 
-var server = app.listen(3000, function () {
+var server = app.listen(Number(process.env.PORT || 3000), function () {
     //var host = server.address().address;
     //var port = server.address().port;
-    console.log("Server started...");
+    //console.log("Server started...");
 });
