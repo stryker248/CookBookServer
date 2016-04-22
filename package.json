@@ -1,0 +1,13 @@
+{
+  "name": "cookbookserver",
+  "version": "1.0.0",
+  "description": "server for android app",
+  "main": "index.js",
+  "author": "stryker",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4"
+  }
+}
