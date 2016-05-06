@@ -12,11 +12,11 @@ var categorySalad = new Category(6, 'Salad');
 
 var categories = [
     categoryAppetizer,
-    categoryPasta,
     categoryChicken,
     categoryDessert,
-    categorySalad,
-    categoryPork
+    categoryPasta,
+    categoryPork,
+    categorySalad
 ];
 
 Category.find = function(callBack) {
