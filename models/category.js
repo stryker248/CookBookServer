@@ -23,4 +23,31 @@ Category.find = function(callBack) {
     return callBack(categories);
 }
 
+Category.findById = function(id, callBack) {
+    var category = '';
+
+    switch (id) {
+    case 1:
+        category = categories[0].name;
+        break;
+    case 2:
+        category = categories[1].name;
+        break;
+    case 3:
+        category = categories[2].name;
+        break;
+    case 4:
+        category = categories[3].name;
+        break;
+    case 5:
+        category = categories[4].name;
+        break;
+    case 6:
+        category = categories[5].name;
+        break;
+    }
+
+    return callBack(category);
+}
+
 module.exports = Category;
