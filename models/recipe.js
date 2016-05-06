@@ -160,4 +160,28 @@ Recipe.rate = function(newRating, callBack) {
     }
 }
 
+Recipe.reset = function(callBack) {
+    var recipes = [
+        recipeAppetizer1,
+        recipeAppetizer2,
+        recipeChicken1,
+        recipeChicken2,
+        recipeDessert1,
+        recipeDessert2,
+        recipePasta1,
+        recipePasta2,
+        recipePork1,
+        recipePork2,
+        recipeSalad1,
+        recipeSalad2
+    ];
+
+    recipes.forEach(function(item) {
+        item.rating = 0;
+        item.ratingNumber = 0;
+    });
+
+    return callBack();
+}
+
 module.exports = Recipe;

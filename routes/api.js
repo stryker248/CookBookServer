@@ -5,6 +5,7 @@ var getRecipeListMW = require('../middleware/recipe/getRecipeList');
 var getRecipeListByEmailMW = require('../middleware/recipe/getRecipeListByEmail');
 var rateRecipeMW = require('../middleware/recipe/rateRecipe');
 var searchRecipesMW = require('../middleware/recipe/searchRecipes');
+var resetRecipesMW = require('../middleware/recipe/resetRecipes');
 
 var recipeModel = require('../models/recipe');
 var recipeResultModel = require('../models/recipeResult');
@@ -67,5 +68,13 @@ module.exports = function (app) {
             return next();
         },
         getCategoryListMW(objectRepository)
+    );
+
+    app.get('/api/v1/recipes/reset',
+        function (req, res, next) {
+            console.log('GET /api/v1/reset');
+            return next();
+        },
+        resetRecipesMW(objectRepository)
     );
 }
