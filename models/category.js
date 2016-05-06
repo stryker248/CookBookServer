@@ -3,10 +3,21 @@ var Category = function(id, name) {
     this.name = name;
 }
 
-var category1 = new Category(1, 'Category1');
-var category2 = new Category(2, 'Category2');
+var categoryAppetizer = new Category(1, 'Appetizer');
+var categoryChicken = new Category(2, 'Chicken');
+var categoryDessert = new Category(3, 'Dessert');
+var categoryPasta = new Category(4, 'Pasta');
+var categoryPork = new Category(5, 'Pork');
+var categorySalad = new Category(6, 'Salad');
 
-var categories = [ category1, category2 ];
+var categories = [
+    categoryAppetizer,
+    categoryPasta,
+    categoryChicken,
+    categoryDessert,
+    categorySalad,
+    categoryPork
+];
 
 Category.find = function(callBack) {
     return callBack(categories);
