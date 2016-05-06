@@ -161,7 +161,7 @@ Recipe.rate = function(newRating, callBack) {
 }
 
 Recipe.reset = function(callBack) {
-    var recipes = [
+    recipes = [
         recipeAppetizer1,
         recipeAppetizer2,
         recipeChicken1,
